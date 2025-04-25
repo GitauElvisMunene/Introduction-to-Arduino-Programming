@@ -15,7 +15,6 @@ This project implements an automatic temperature-controlled fan system with OLED
 - DHT22 Temperature and Humidity Sensor
 - SSD1306 OLED Display (128x64 pixels)
 - DC Motor/Fan
-- Motor Driver (L298N or similar)
 - Jumper wires
 - Breadboard (optional)
 
@@ -25,7 +24,7 @@ This project implements an automatic temperature-controlled fan system with OLED
 |-----------|-----|-------------|
 | DHT22 | A4 (7) | Temperature and Humidity Sensor |
 | OLED Display | SDA: 42, SCL: 2 | I2C Communication |
-| Motor Driver | INA: D3 (38), INB: D4 (35) | Motor Control Pins |
+| Motor | INA: D3 (38), INB: D4 (35) | Motor Control Pins |
 
 ## Libraries Required
 
@@ -52,30 +51,6 @@ This project implements an automatic temperature-controlled fan system with OLED
 3. Upload the code to your Arduino board
 4. Power on the system
 
-## Schematic Diagram
-
-```
-+------------------+     +------------------+     +------------------+
-|                  |     |                  |     |                  |
-|   DHT22 Sensor   |     |   Arduino Board  |     |   OLED Display   |
-|                  |     |                  |     |                  |
-+--------+---------+     +--------+---------+     +--------+---------+
-         |                        |                        |
-         |                        |                        |
-         |                        |                        |
-         v                        v                        v
-+--------+---------+     +--------+---------+     +--------+---------+
-|                  |     |                  |     |                  |
-|   Motor Driver   |     |   Power Supply   |     |   DC Motor/Fan   |
-|                  |     |                  |     |                  |
-+------------------+     +------------------+     +------------------+
-
-Pin Connections:
-- DHT22: A4 (Pin 7)
-- OLED: SDA (Pin 42), SCL (Pin 2)
-- Motor: INA (Pin 38), INB (Pin 35)
-```
-
 ## Troubleshooting
 
 1. If the OLED display doesn't show anything:
@@ -89,7 +64,7 @@ Pin Connections:
    - Ensure proper power supply
 
 3. If the fan doesn't turn on/off:
-   - Check motor driver connections
+   - Check motor connections
    - Verify the control pins
    - Ensure proper power supply to the motor
 
@@ -99,7 +74,7 @@ This project is open-source and available for educational and personal use.
 
 ## Author
 
-[Your Name]
+Elvis Munene
 
 ## Version
 
